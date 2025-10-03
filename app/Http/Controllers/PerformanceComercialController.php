@@ -16,7 +16,6 @@ class PerformanceComercialController extends Controller
         $seleccionados = $request->input('seleccionados', []);
         $accion = $request->input('accion', 'relatorio');
 
-        // Cargar lista de consultores o clientes
         $items = ($tipo === 'clientes')
             ? DB::table('cao_cliente')->select('co_cliente as id', 'no_fantasia as nombre')->get()
             : DB::table('permissao_sistema')
@@ -138,7 +137,6 @@ class PerformanceComercialController extends Controller
                 ];
             }
 
-            // Gráfico tipo pizza solo si se solicita
             if ($accion === 'pizza') {
                 $receitaPorConsultor = [];
 

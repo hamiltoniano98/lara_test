@@ -7,22 +7,22 @@
 
 <form method="GET" action="{{ route('performance.index') }}">
     <div class="row g-3 mb-4">
-        <div class="col-md-3">
+        <div class="col-md-2">
             <label for="tipo" class="form-label">Tipo</label>
             <select name="tipo" id="tipo" class="form-select">
                 <option value="consultores" {{ $tipo == 'consultores' ? 'selected' : '' }}>Consultores</option>
                 <option value="clientes" {{ $tipo == 'clientes' ? 'selected' : '' }}>Clientes</option>
             </select>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-2">
             <label for="data_inicio" class="form-label">Desde</label>
             <input type="date" name="data_inicio" id="data_inicio" class="form-control" value="{{ $data_inicio ?? '' }}">
         </div>
-        <div class="col-md-3">
+        <div class="col-md-2">
             <label for="data_fim" class="form-label">Hasta</label>
             <input type="date" name="data_fim" id="data_fim" class="form-control" value="{{ $data_fim ?? '' }}">
         </div>
-        <div class="col-md-3 d-flex align-items-end justify-content-end">
+        <div class="col-md-6 d-flex align-items-end justify-content-end">
             <button type="submit" name="accion" value="cambiar_tipo" class="btn btn-secondary me-2">Actualizar Tipo</button>
             <button type="submit" name="accion" value="relatorio" class="btn btn-primary me-2">Relatório</button>
             <button type="submit" name="accion" value="grafico" class="btn btn-success">Gráfico</button>

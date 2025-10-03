@@ -11,6 +11,8 @@ document.addEventListener("DOMContentLoaded", () => {
             data: datas,
             options: {
                 responsive: true,
+                maintainAspectRatio: true,
+                aspectRatio: 3,
                 plugins: {
                     legend: {
                         position: "right",

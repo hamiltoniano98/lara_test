@@ -10,6 +10,8 @@ if (ctx) {
         data: { labels, datasets },
         options: {
             responsive: true,
+            maintainAspectRatio: true,
+            aspectRatio: 5,
             scales: {
                 y: {
                     beginAtZero: true,
